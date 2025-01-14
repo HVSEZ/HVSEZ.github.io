@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Image with Spinner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positioned Image</title>
+  <style>
+      body, html {
+          height: 100%;
+          margin: 0;
+          background-color: #f0f0f000;
+      }
+
+      .positioned-image {
+          position: absolute;
+          max-width: 100%;
+          max-height: 100%;
+          /* Adjust these values to move the image */
+          top: 50px;  /* Distance from the top */
+          left: 100px; /* Distance from the left */
+      }
+  </style>
+</head>
+<body>
+  <img src="d:\downloads\bc matkustus (1).png" alt="Positioned Image" class="positioned-image">
+
+  <!-- Background Image -->
+  <img src="d:\downloads\HVS BITCHES\HVS BITCH.png" alt="Background" class="background-image">
+
+  <!-- Spinner Section -->
+  <div class="spinner-container">
+    <!-- Color Bar -->
+    <div class="color-bar"></div>
+    <!-- SVG Spinner (loaded from file) -->
+    <img src="d:\downloads\HVS BITCHES\spinner.8b1ff0a4.svg" alt="Spinner" class="spinner">
+  </div>
+
+  <!-- Hidden Color Changer -->
+  <input type="color" id="color-changer" class="hidden-color-changer">
+
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('Service Worker registered:', registration);
+                })
+                .catch((error) => {
+                    console.log('Service Worker registration failed:', error);
+                });
+        });
+    }
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>

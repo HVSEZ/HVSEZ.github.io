@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.positioned-image {
+  width: 9%; /* Full width */
+  height: 9%;
+  top: 0%;
+  left: 50%;
+  transform: translate(490%, 590%);
+  z-index: 2;
+}
+/* Background Image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: contain; /* Cover the entire screen */
+  z-index: -1; /* Place behind other content */
+}
+
+/* Spinner Container */
+.spinner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the spinner */
+  text-align: center;
+}
+
+/* Color Bar */
+.color-bar {
+  width: 195px; /* Width of the color bar */
+  height: 130px; /* Height of the color bar */
+  position: absolute;
+  top: 50px;
+  left: -200px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Default gradient color */
+  margin: 0 auto 20px; /* Center and add space below */
+  border-bottom-left-radius: 10px; /* Rounded corners */
+  transition: background 0.3s ease; /* Smooth transition for color change */
+}
+
+/* SVG Spinner */
+.spinner {
+  width: 390px; /* Size of the spinner */
+  height: 130px;
+  position: absolute;
+  top: 50px;
+  left: -190px;
+  animation: rotate 2s linear infinite; /* Rotate animation */
+}
+
+
+/* Hidden Color Changer */
+.hidden-color-changer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0; /* Hide the input */
+  width: 0;
+  height: 0;
+}
+
+/* Show Color Changer on Hover */
+body:hover .hidden-color-changer {
+  opacity: 1; /* Show the input */
+  width: auto;
+  height: auto;
+}
